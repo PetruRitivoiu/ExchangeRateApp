@@ -23,7 +23,7 @@ namespace ExchangeRate.Services
                     }
                     else
                     {
-                        throw new HttpRequestException();
+                        throw new HttpRequestException("Something went wrong when trying to download the latest exchange rates");
                     }
                 }
             }
