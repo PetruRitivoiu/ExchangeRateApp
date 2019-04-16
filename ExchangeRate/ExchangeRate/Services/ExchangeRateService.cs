@@ -7,13 +7,13 @@ namespace ExchangeRate.Services
 {
     public class ExchangeRateService
     {
-        public async Task<ExchangeRateModel> GetAsync()
+        public async Task<ExchangeRateModel> GetAsync(string url)
         {
             using (var httpClient = new HttpClient())
             {
                 httpClient.DefaultRequestHeaders.Add("access-control-allow-methods", "[GET]");
 
-                using (var response = await httpClient.GetAsync("https://api.exchangeratesapi.io/latest"))
+                using (var response = await httpClient.GetAsync(url))
                 {
                     if (response.IsSuccessStatusCode)
                     {

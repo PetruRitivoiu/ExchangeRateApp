@@ -16,6 +16,14 @@
 
         <Label Text="{Binding DateDescription}"></Label>
 
+        <ListView ItemsSource="{Binding Rates}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Description}"></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
     </StackLayout>
 
 </ContentPage>

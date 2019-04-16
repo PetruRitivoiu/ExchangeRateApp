@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\thinkpad-e560\Source\Repos\ExchangeRate\ExchangeRate\ExchangeRate.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-14T17:03:07.099</Modified>
+      <Modified>2019-04-16T17:20:04.830</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\thinkpad-e560\Source\Repos\ExchangeRate\ExchangeRate\ExchangeRate.UWP\bin\x86\Debug\ExchangeRate.UWP.exe">
       <PackagePath>entrypoint\ExchangeRate.UWP.exe</PackagePath>
-      <Modified>2019-04-14T17:03:01.198</Modified>
+      <Modified>2019-04-16T17:20:01.384</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thinkpad-e560\.nuget\packages\newtonsoft.json\12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -724,7 +724,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thinkpad-e560\Source\Repos\ExchangeRate\ExchangeRate\ExchangeRate\bin\Debug\netstandard2.0\ExchangeRate.dll">
       <PackagePath>ExchangeRate.dll</PackagePath>
-      <Modified>2019-04-14T17:02:50.236</Modified>
+      <Modified>2019-04-16T17:19:51.148</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\ProgramData\Xamarin\NuGet\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -875,11 +875,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thinkpad-e560\Source\Repos\ExchangeRate\ExchangeRate\ExchangeRate.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-04-14T17:03:00.903</Modified>
+      <Modified>2019-04-16T17:20:01.151</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thinkpad-e560\Source\Repos\ExchangeRate\ExchangeRate\ExchangeRate.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-04-14T17:03:00.903</Modified>
+      <Modified>2019-04-16T17:20:01.151</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -891,11 +891,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thinkpad-e560\Source\Repos\ExchangeRate\ExchangeRate\ExchangeRate.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-04-14T17:03:02.882</Modified>
+      <Modified>2019-04-16T17:20:02.874</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\thinkpad-e560\Source\Repos\ExchangeRate\ExchangeRate\ExchangeRate.UWP\bin\x86\Debug\Core\ExchangeRate.UWP.exe">
       <PackagePath>ExchangeRate.UWP.exe</PackagePath>
-      <Modified>2019-04-14T17:03:07.076</Modified>
+      <Modified>2019-04-16T17:20:04.801</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

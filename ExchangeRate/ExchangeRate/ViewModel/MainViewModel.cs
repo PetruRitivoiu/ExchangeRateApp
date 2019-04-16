@@ -4,6 +4,10 @@ using ExchangeRate.Services;
 using ExchangeRate.Model;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System;
+using System.Collections.ObjectModel;
+using ExchangeRate.ViewModel.ViewObjects;
+using System.Linq;
 
 namespace ExchangeRate.ViewModel
 {
@@ -20,6 +24,7 @@ namespace ExchangeRate.ViewModel
         public MainViewModel()
         {
             mExchangeRateService = new ExchangeRateService();
+            Rates = new ObservableCollection<RateViewObject>();
         }
 
 
@@ -57,6 +62,8 @@ namespace ExchangeRate.ViewModel
             }
         }
 
+        public ObservableCollection<RateViewObject> Rates { get; set; }
+
         //commands
         public ICommand RefreshExchangeRateCommand => mRefreshExchangeRateCommand ?? (mRefreshExchangeRateCommand = new Command(() => updateExchangeRate()));
 
@@ -73,9 +80,13 @@ namespace ExchangeRate.ViewModel
         //methods
         private async void updateExchangeRate()
         {
-            var content = await mExchangeRateService.GetAsync();
+            var content = await mExchangeRateService.GetAsync("https://api.exchangeratesapi.io/latest");
             BaseDescription = $"{nameof(content.Base)}: {content.Base}";
             DateDescription = $"{nameof(content.Date)}: {content.Date}";
+
+            Rates.Add(new RateViewObject() { Name = nameof(content.Rates.USD), Rate = content.Rates.USD });
+            Rates.Add(new RateViewObject() { Name = nameof(content.Rates.GBP), Rate = content.Rates.GBP });
+            Rates.Add(new RateViewObject() { Name = nameof(content.Rates.RON), Rate = content.Rates.RON });
         }
     }
 }
