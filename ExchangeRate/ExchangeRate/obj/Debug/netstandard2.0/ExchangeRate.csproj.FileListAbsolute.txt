@@ -10,3 +10,15 @@ C:\Users\thinkpad-e560\Source\Repos\ExchangeRate\ExchangeRate\ExchangeRate\obj\D
 C:\Users\thinkpad-e560\Source\Repos\ExchangeRate\ExchangeRate\ExchangeRate\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\thinkpad-e560\Source\Repos\ExchangeRate\ExchangeRate\ExchangeRate\obj\Debug\netstandard2.0\ExchangeRate.dll
 C:\Users\thinkpad-e560\Source\Repos\ExchangeRate\ExchangeRate\ExchangeRate\obj\Debug\netstandard2.0\ExchangeRate.pdb
+C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate\obj\Debug\netstandard2.0\View\HistoryView.xaml.g.cs
+C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate\obj\Debug\netstandard2.0\View\MainView.xaml.g.cs
+C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate\obj\Debug\netstandard2.0\ExchangeRate.csproj.CoreCompileInputs.cache
+C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate\obj\Debug\netstandard2.0\ExchangeRate.AssemblyInfoInputs.cache
+C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate\obj\Debug\netstandard2.0\ExchangeRate.AssemblyInfo.cs
+C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate\bin\Debug\netstandard2.0\ExchangeRate.deps.json
+C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate\bin\Debug\netstandard2.0\ExchangeRate.dll
+C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate\bin\Debug\netstandard2.0\ExchangeRate.pdb
+C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate\obj\Debug\netstandard2.0\ExchangeRate.dll
+C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate\obj\Debug\netstandard2.0\ExchangeRate.pdb
+C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate\obj\Debug\netstandard2.0\XamlC.stamp

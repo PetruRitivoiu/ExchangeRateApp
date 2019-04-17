@@ -1,45 +1,25 @@
 ﻿using ExchangeRate.ViewModel;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace ExchangeRate.View
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HistoryView : ContentPage
-    {
-        private HistoryViewModel ViewModel { get; set; }
-        public ObservableCollection<string> Items { get; set; }
+	// Learn more about making custom code visible in the Xamarin.Forms previewer
+	// by visiting https://aka.ms/xamarinforms-previewer
+	[DesignTimeVisible(true)]
+	public partial class HistoryView : ContentPage
+	{
+		private HistoryViewModel ViewModel { get; set; }
 
-        public HistoryView(HistoryViewModel viewModel)
-        {
-            InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
+		public HistoryView(HistoryViewModel viewModel)
+		{
+			InitializeComponent();
+			NavigationPage.SetHasNavigationBar(this, false);
 
-            ViewModel = viewModel;
-            BindingContext = ViewModel;
-
-            Items = new ObservableCollection<string>
-            {
-                "Item 1",
-                "Item 2",
-                "Item 3",
-                "Item 4",
-                "Item 5"
-            };
-
-            MyListView.ItemsSource = Items;
-        }
-
-        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            if (e.Item == null)
-                return;
-
-            await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
-
-            //Deselect Item
-            ((ListView)sender).SelectedItem = null;
-        }
-    }
+			ViewModel = viewModel;
+			BindingContext = ViewModel;
+		}
+	}
 }

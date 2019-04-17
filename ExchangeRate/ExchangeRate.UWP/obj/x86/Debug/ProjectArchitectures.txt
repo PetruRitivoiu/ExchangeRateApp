@@ -1,1 +1,1 @@
-C:\Users\thinkpad-e560\Source\Repos\ExchangeRate\ExchangeRate\ExchangeRate.UWP\ExchangeRate.UWP.csproj;x86
+C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate.UWP\ExchangeRate.UWP.csproj;x86

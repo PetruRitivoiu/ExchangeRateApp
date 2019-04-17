@@ -4,26 +4,26 @@
              xmlns:local="clr-namespace:ExchangeRate"
              x:Class="ExchangeRate.MainView">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="{Binding ExchangeAppLabel}" />
+	<StackLayout>
+		<!-- Place new controls here -->
+		<Label Text="{Binding ExchangeAppLabel}" />
 
-        <Button Text="{Binding ViewHistoryButtonText}" Clicked="Button_Clicked" WidthRequest="40"></Button>
+		<Button Text="{Binding ViewHistoryButtonText}" Clicked="Button_Clicked" WidthRequest="40"></Button>
 
-        <Button Text="{Binding RefreshExchangeRateButtonText}" Command="{Binding RefreshExchangeRateCommand}" WidthRequest="40"></Button>
+		<Button Text="{Binding RefreshExchangeRateButtonText}" Command="{Binding RefreshExchangeRateCommand}" WidthRequest="40"></Button>
 
-        <Label Text="{Binding BaseDescription}"></Label>
+		<Label Text="{Binding BaseDescription}"></Label>
 
-        <Label Text="{Binding DateDescription}"></Label>
+		<Label Text="{Binding DateDescription}"></Label>
 
-        <ListView ItemsSource="{Binding Rates}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding Description}"></TextCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        
-    </StackLayout>
+		<ListView ItemsSource="{Binding Rates}">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<TextCell Text="{Binding RateDescription}"></TextCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+
+	</StackLayout>
 
 </ContentPage>
