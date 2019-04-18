@@ -22,3 +22,4 @@ C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate\bin\Debug\
 C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate\obj\Debug\netstandard2.0\ExchangeRate.dll
 C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate\obj\Debug\netstandard2.0\ExchangeRate.pdb
 C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\petrur\Desktop\TMW\ExchangeRateApp\ExchangeRate\ExchangeRate\obj\Debug\netstandard2.0\ExchangeRate.csprojAssemblyReference.cache

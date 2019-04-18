@@ -8,10 +8,14 @@
 		<!-- Place new controls here -->
 		<Label Text="{Binding ExchangeAppLabel}" />
 
-		<Button Text="{Binding ViewHistoryButtonText}" Clicked="Button_Clicked" WidthRequest="40"></Button>
+		<StackLayout WidthRequest="200" HorizontalOptions="Center">
+			<Button Text="{Binding ViewHistoryButtonText}" Clicked="Button_Clicked"></Button>
 
-		<Button Text="{Binding RefreshExchangeRateButtonText}" Command="{Binding RefreshExchangeRateCommand}" WidthRequest="40"></Button>
+			<Button Text="{Binding RefreshExchangeRateButtonText}" Command="{Binding RefreshExchangeRateCommand}"></Button>
+		</StackLayout>
 
+		<Label Text="{Binding CurrentRateCached}"></Label>
+		
 		<Label Text="{Binding BaseDescription}"></Label>
 
 		<Label Text="{Binding DateDescription}"></Label>

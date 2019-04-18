@@ -7,6 +7,8 @@ using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
 using ExchangeRate.ViewModel.ViewObjects;
 using System.Threading.Tasks;
+using System.Linq;
+using System;
 
 namespace ExchangeRate.ViewModel
 {
@@ -19,6 +21,7 @@ namespace ExchangeRate.ViewModel
 		private ExchangeRateDb mExchangeRateDb;
 		private string baseDescription;
 		private string dateDescription;
+		private string currentRateCached;
 
 		//constructors
 		public MainViewModel()
@@ -63,6 +66,15 @@ namespace ExchangeRate.ViewModel
 				RaisePropertyChanged();
 			}
 		}
+		public string CurrentRateCached
+		{
+			get => currentRateCached;
+			set
+			{
+				currentRateCached = value;
+				RaisePropertyChanged();
+			}
+		}
 
 		public ObservableCollection<RateViewObject> Rates { get; set; }
 
@@ -82,15 +94,35 @@ namespace ExchangeRate.ViewModel
 		//methods
 		private async Task updateExchangeRate()
 		{
-			var content = await mExchangeRateApi.GetAsync("https://api.exchangeratesapi.io/latest");
-			BaseDescription = $"{nameof(content.Base)}: {content.Base}";
-			DateDescription = $"{nameof(content.Date)}: {content.Date}";
+			var currentRate = (await mExchangeRateDb.GetCurrentRateAsync()).FirstOrDefault();
+			if (currentRate == null)
+			{
+				var content = await mExchangeRateApi.GetAsync("https://api.exchangeratesapi.io/latest");
+				BaseDescription = $"{nameof(content.Base)}: {content.Base}";
+				DateDescription = $"{nameof(content.Date)}: {content.Date}";
 
-			Rates.Add(new RateViewObject() { Name = nameof(content.Rates.USD), Rate = content.Rates.USD });
-			Rates.Add(new RateViewObject() { Name = nameof(content.Rates.GBP), Rate = content.Rates.GBP });
-			Rates.Add(new RateViewObject() { Name = nameof(content.Rates.RON), Rate = content.Rates.RON });
+				Rates.Add(new RateViewObject() { Name = nameof(content.Rates.USD), Rate = content.Rates.USD });
+				Rates.Add(new RateViewObject() { Name = nameof(content.Rates.GBP), Rate = content.Rates.GBP });
+				Rates.Add(new RateViewObject() { Name = nameof(content.Rates.RON), Rate = content.Rates.RON });
 
-			await mExchangeRateDb.AddAsync(content);
+				CurrentRateCached = $"Exchange rate for {content.Date} has been cached";
+
+				await mExchangeRateDb.AddAsync(content);
+			}
+			else
+			{
+				CurrentRateCached = $"Results retrieved from cache (sqlite)";
+
+				if (!Rates.Any())
+				{
+					BaseDescription = currentRate.Base;
+					DateDescription = currentRate.Date;
+
+					Rates.Add(new RateViewObject() { Name = nameof(currentRate.Rates.USD), Rate = currentRate.Rates.USD });
+					Rates.Add(new RateViewObject() { Name = nameof(currentRate.Rates.GBP), Rate = currentRate.Rates.GBP });
+					Rates.Add(new RateViewObject() { Name = nameof(currentRate.Rates.RON), Rate = currentRate.Rates.RON });
+				}
+			}
 		}
 	}
 }

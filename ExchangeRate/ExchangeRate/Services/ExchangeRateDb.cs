@@ -4,6 +4,8 @@ using SQLite;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using SQLiteNetExtensionsAsync.Extensions;
+using System;
+using System.Linq;
 
 namespace ExchangeRate.Services
 {
@@ -31,6 +33,12 @@ namespace ExchangeRate.Services
 			return connection.InsertWithChildrenAsync(model);
 		}
 
+		public async Task<List<ExchangeRateModel>> GetCurrentRateAsync()
+		{
+			var previousDay = DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd");
+			var currentDay = DateTime.Now.ToString("yyyy-MM-dd");
+			return await connection.GetAllWithChildrenAsync<ExchangeRateModel>(x => x.Date == previousDay || x.Date == currentDay);
+		}
 
 	}
 }
